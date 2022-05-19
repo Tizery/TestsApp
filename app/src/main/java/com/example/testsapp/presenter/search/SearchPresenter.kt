@@ -2,7 +2,7 @@ package com.example.testsapp.presenter.search
 
 import com.example.testsapp.model.SearchResponse
 import com.example.testsapp.repository.GitHubRepository
-import com.example.testsapp.repository.GitHubRepository.GitHubRepositoryCallback
+import com.example.testsapp.repository.RepositoryCallback
 import com.example.testsapp.view.ViewContract
 import com.example.testsapp.view.search.ViewSearchContract
 import retrofit2.Response
@@ -10,7 +10,7 @@ import retrofit2.Response
 internal class SearchPresenter internal constructor(
     private val viewContract: ViewSearchContract,
     private val repository: GitHubRepository
-) : PresenterSearchContract, GitHubRepositoryCallback {
+) : PresenterSearchContract, RepositoryCallback {
 
     override fun onAttach(view: ViewContract) {
         super.onAttach(view)
